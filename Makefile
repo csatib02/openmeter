@@ -72,9 +72,11 @@ mod: ## go mod tidy
 seed: ## Seed OpenMeter with test data
 	$(call print-target)
 	$(BENTHOS_BIN) -c etc/seed/seed.yaml
-	
+
 .PHONY: deps
-deps: bin/air bin/dagger bin/golangci-lint bin/licensei bin/benthos ## Install dependencies
+deps: ## Install dependencies
+	$(call print-target)
+	$(MAKE) bin/air bin/dagger bin/golangci-lint bin/licensei bin/benthos
 
 # Dependency versions
 AIR_VERSION = 1.51.0
