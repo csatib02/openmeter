@@ -23,7 +23,7 @@ build-server: ## Build server binary
 	go build -o build/server ./cmd/server
 
 .PHONY: build-sink-worker
-build-sink-worker: ## Build binary
+build-sink-worker: ## Build sink-worker binary
 	$(call print-target)
 	go build -o build/sink-worker ./cmd/sink-worker
 
@@ -31,7 +31,7 @@ config.yaml:
 	cp config.example.yaml config.yaml
 
 .PHONY: server
-server: ## Run sink-worker
+server: ## Run server
 	@ if [ config.yaml -ot config.example.yaml ]; then diff -u config.yaml config.example.yaml || (echo "!!! The configuration example changed. Please update your config.yaml file accordingly (or at least touch it). !!!" && false); fi
 	$(call print-target)
 	$(AIR_BIN) -c ./cmd/server/.air.toml
