@@ -3,6 +3,8 @@ approved = [
   "apache-2.0",
   "bsd-3-clause",
   "bsd-2-clause",
+  "mpl-2.0",
+  "isc",
   "epl-2.0",
 ]
 
