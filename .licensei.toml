@@ -1,25 +1,27 @@
 approved = [
-  "mit",
   "apache-2.0",
-  "bsd-3-clause",
+  "mit",
   "bsd-2-clause",
+  "bsd-3-clause",
   "mpl-2.0",
   "isc",
   "epl-2.0",
+  "richard-crowley",
 ]
 
 ignored = [
-  "github.com/invopop/yaml", # MIT
   "github.com/xeipuuv/gojsonpointer", # Apache 2.0
   "github.com/xeipuuv/gojsonreference", # Apache 2.0
   "github.com/xeipuuv/gojsonschema", # Apache 2.0
+  "github.com/couchbase/gocbcoreps", # Apache 2.0
+  "github.com/segmentio/asm", # MIT
+  "github.com/JohnCGriffin/overflow", # MIT
+  "github.com/invopop/yaml", # MIT
   "github.com/russross/blackfriday/v2", # 2-Clause BSD
   "github.com/gogo/protobuf", # 3-Clause BSD
-  "github.com/segmentio/asm", # MIT
-  
+
   "cuelang.org/go", # Apache 2.0
   "go.mongodb.org/mongo-driver", # Apache 2.0
-
 
   # Unsupported VCS
   "google.golang.org/protobuf", # 3-Clause BSD
@@ -27,6 +29,9 @@ ignored = [
   "modernc.org/mathutil", # 3-Clause BSD
   "modernc.org/memory", # 3-Clause BSD
   "modernc.org/sqlite", # 3-Clause BSD
+
+  # No license
+  "https://github.com/couchbase/goprotostellar"
 ]
 
 [header]
